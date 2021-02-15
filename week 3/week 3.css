@@ -1,0 +1,39 @@
+
+
+
+body {
+
+    background-color:lavender;
+
+    font-size: 10pt;
+  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  
+    color:rebeccapurple;
+  
+    line-height: 14pt;
+  
+    padding-left: 5pt;
+  
+    padding-right: 5pt;
+  
+    padding-top: 5pt;
+  
+}
+  
+
+div.footer {
+
+    font-size: 9pt 
+  
+    font-style: italic;
+  
+    line-height: 12pt;
+  
+    text-align: center;
+  
+    padding-top: 30pt;
+  
+}
+
+/* Source: https://www.informit.com/articles/article.aspx?p=1796285&seqNum=2*/
