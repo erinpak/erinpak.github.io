@@ -1,0 +1,126 @@
+
+
+body {
+    background-color:ivory;
+    font-size: x-large;
+}
+
+p {
+    font-size:x-large;
+}
+
+#theGlasses {
+     text-align:center;
+     padding: 20px;
+}
+
+button {
+    padding: 50px;
+    border: solid 3px;
+    border-radius: 20px;
+    font-size: x-large;
+}
+
+button:hover {
+    background-color:lightblue;
+    color: whitesmoke;
+   
+}
+
+#theNose {
+    height: 50px;
+    width: 3px;
+    background-color: black;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+#theMouth {
+    display:flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid lightcoral;
+    background-color:  white;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    width: 200px;
+    padding: 15px;
+}
+
+#theMouth:hover {
+    background-color:salmon;
+}
+
+.theTaco {
+    flex-grow: 7px;
+    margin: 13px;
+}
+
+#wrapper {
+    width:800px;
+    clear:both;
+    margin-left:20px;
+  }
+  #Dumbbell1 {
+    background-color:cornflowerblue;
+    border:solid darkblue;
+    width:200px;
+    height: 200px;
+    line-height:150px;
+    border-radius: 40px;
+    float:left;
+    text-align: center;
+  }
+  #Dumbbell3 {
+    width:100px;
+    height:100px;
+    border-top: solid darkblue;
+    border-bottom: solid darkblue;
+    background-color: cornflowerblue;
+    float:left;
+    margin-top: 50px;
+  }
+  #Dumbbell2 {
+    background-color:cornflowerblue;
+    border: solid darkblue;
+    width:200px;
+    height: 200px;
+    line-height:150px;
+    border-radius: 40px;
+    float:left;
+    text-align: center;
+  }
+
+#tV {
+    float:right;
+    padding-right: 20px;
+    color:white;
+    text-align:center;
+}
+
+#remote {
+    float:right;
+    padding-right:100px;
+}
+
+footer {
+    position:absolute;
+    bottom: 30px;
+    margin-left:500px;
+    animation-name: example;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    0% {background-color:darkorange;}
+    50% {background-color: darkorchid;}
+    99% {background-color:darkorange;}
+}
+
+/* Source code for wrapper: 
+https://stackoverflow.com/questions/20179154/how-can-i-align-3-divs-side-by-side /*
+/* Source code for table:
+https://www.tutorialspoint.com/html/html_tables.htm /*
