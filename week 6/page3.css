@@ -1,0 +1,99 @@
+html {
+    background:url(images/starbg.jpeg)
+}
+
+h1 {
+    font-size: 370pt;
+    font-stretch: wider;
+    font-family: Arial, Helvetica, sans-serif;
+    animation-name: colorchange;
+    animation-duration:6s;
+    animation-iteration-count: infinite;
+}
+
+p {
+    font-size:12pt;
+    font-family:monospace;
+    color:papayawhip;
+}
+
+#pageContainer {
+    position:relative;
+    min-height: 100vh;
+}
+
+#contentWrap {
+    padding-bottom:2.5rem;
+}
+
+#questionText {
+    position:relative;
+    text-align: center;
+    padding-top: 350px;
+}
+
+#answerText {
+    position:relative;
+    max-width: 600px;
+}
+
+#footer {
+    position:absolute;
+    bottom:10px;
+    width: 100%;
+    text-align: center;
+}
+
+a:link {
+    color:sandybrown;
+}
+
+a:visited {
+    color:skyblue;
+}
+
+a:hover {
+    background-color: snow;
+}
+
+@keyframes colorchange {
+    0%  {color:yellowgreen}
+    25% {color:thistle}
+    50% {color:sandybrown}
+    75% {color:skyblue}
+    100% {color:yellowgreen}
+}
+
+
+
+
+
+
+/*aliens*/
+
+#ufo {
+    animation-name: motion;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+#alien {
+    position:absolute;
+    animation-name: motion;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+img {
+    width:200px;
+}
+
+@keyframes motion {
+    from {
+        transform: translate(0,0);
+    }
+    
+    to {
+        transform: translate(1920px,0);
+    }
+}

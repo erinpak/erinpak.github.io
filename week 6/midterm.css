@@ -1,0 +1,66 @@
+
+header {
+    color:cornsilk;
+    font-family:'Courier New', Courier, monospace;
+    font-size:small;
+    text-align:center;
+    letter-spacing: 2px;
+    padding-top: 325px;
+}
+
+body {
+    background:url('images/spacebg.gif') center center fixed;
+    justify-content:center;
+}
+
+h1 {
+    color:skyblue;
+    letter-spacing: 5px;
+    font-family: monospace;
+    font-style:normal;
+}
+
+p {
+    color:cornsilk;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:medium;
+}
+
+footer {
+    position:relative;
+    background-color:midnightblue;
+    border-radius:25px;
+    opacity: 0.85;
+    height:800px;
+    margin-top:500px;
+    font-family: monospace;
+    font-size:12pt;
+    display: grid;
+    align-items: center;
+    align-content:center;
+    background-size: 100% 100%;
+    justify-content: center;
+    color:oldlace;
+}
+
+a:link {
+    color:yellowgreen;
+}
+
+a:visited {
+    color:darksalmon;
+}
+
+a:hover {
+    background:sandybrown;
+    color:seashell;
+}
+
+#centerText {
+    font-size: x-large;
+    text-align:center;
+}
+
+.footerNumbers {
+    color:skyblue;
+}

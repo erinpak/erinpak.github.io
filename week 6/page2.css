@@ -1,0 +1,109 @@
+
+
+
+
+html {
+    background:black;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+}
+@media only screen and (max-width: 600px) {
+    html {
+        font-weight: bolder;
+        background-color:purple;
+    }
+}
+
+body {
+    margin:0;
+    padding: 0;
+    color:peachpuff
+}
+
+
+h1 {
+    font-family:'Times New Roman', Times, serif;
+    font-size:x-large;
+    font-weight:normal;
+}
+
+p {
+    color:blanchedalmond;
+    font-style: italic;
+    text-align: center;
+    padding-top: 400px;
+}
+
+em {
+    color:darksalmon;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+#footer {
+    position:absolute;
+    bottom:5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Exploding animation inspired by https://www.youtube.com/watch?v=wcIocS56Kbs&ab_channel=OnlineTutorials */
+.dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: rgb(187, 222, 255, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(187, 222, 255, 1),
+                0 0 40px rgb(187, 222, 255, 1),
+                0 0 60px rgb(187, 222, 255, 1),
+                0 0 80px rgb(187, 222, 255, 1);
+    transition: 1s;
+}
+
+.dot:hover {
+    box-shadow: 0 0 0 30px rgb(187, 222, 255, .1),
+                0 0 0 60px rgb(187, 222, 255, .1),
+                0 0 0 120px rgb(187, 222, 255, .1),
+                0 0 0 240px rgb(187, 222, 255, .1),
+                0 0 0 480px rgb(187, 222, 255, .1),
+                0 0 0 960px rgb(187, 222, 255, .1);
+}
+
+.hide {
+    display:none;
+    color:yellowgreen;
+    text-align:justify;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.dot:hover+.hide {
+    display:block;
+    animation-name: fadeText;
+    animation-duration: 2s;
+}
+
+a:link {
+    color:sandybrown;
+}
+
+a:visited {
+    color:skyblue;
+}
+
+a:hover {
+    background-color: snow;
+}
+
+
+@keyframes fadeText {
+    0%  {opacity:0}
+    50% {opacity:.5}
+    99% {opacity:1}
+}
+
+
