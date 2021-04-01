@@ -1,0 +1,47 @@
+body {
+    background-image:url(https://wallpapercave.com/wp/wp4555534.jpg);
+    background-size:cover;
+}
+
+main {
+    display:flex;
+}
+
+h1{
+    color:gold;
+    font-size: 60pt;
+}
+
+h2{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size:x-large;
+}
+
+p{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size:x-large;
+}
+
+#footer{
+    padding:20px;
+}
+
+button {
+    padding:100px;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+    position:relative;
+    height:400px;
+    width:400px;
+    border-width: 10px; 
+    border-radius:50%; 
+    background-color:red;
+    border-color:plum;
+}
+
+button:hover {
+    background-color:pink;
+}
