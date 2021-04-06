@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>4/1 Reading Response</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <script src="hangmanjava.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>let's play a game</h1>
+        <p>guess the mystery word before you run out of tries and hang the man</p>
+    </div>
+    <div class="centerForm">
+        <form id="hangman">
+            <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="guess a letter"/>
+            <input id="guess" name="guess" type="submit" value="guess" />
+            <button id="restart" name="restart" type="button">restart</button>
+        </form>
+        <br>
+        <ul id="letters"></ul>
+        <br>
+        <p id="stickfigure"></p>
+        <p id="output" class="output"></p> 
+    </div>
+    <div class="popup" onclick="popupFunction()">
+        <p>how does this relate to the reading? (click)</p>
+        <span class="popuptext" id="myPopup">
+            In the reading, McLuhan argues that technology IS the message,
+            rather than just a medium of communicating messages, and that
+            technology helps us to percieve the world in its own unique way.
+            <br><br>
+            The reading was a bit hard for me to understand at first, but I
+            understood it better with the hangman game example. In this example,
+            the content of the message - the word you are trying to guess - is
+            not really that relevant or meaningful. However, the context and functionality
+            for the game, such as having a set number of tries before something
+            terrible happens -the man getting hanged- says a lot more about the 
+            message of the game than its content does. The technology of the
+            hangman game, rather than the content you must guess itself, communicates
+            a clearer message about the dark and hostile nature of the game that
+            uses punishment as a motivator for the user to win.
+            <br><br>
+            <em>- click anywhere to hide -</em>
+        </span>
+    </div>
+    
+    <footer class="footer">
+        <h3>
+            <a href="main.html">back</a>
+        </h3>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
+
+<!-- Sources for hangman:
+    https://www.youtube.com/watch?v=dgvyE1sJS3Y&ab_channel=Quickmawz
+    https://codepen.io/cathydutton/details/ldazc 
+    https://nostarch.com/download/JS4K_ch7.pdf
+    https://jsfiddle.net/phollott/x29ym2ag/ 
+
+    Sources for popup:
+    https://www.w3schools.com/howto/howto_js_popup.asp
+-->

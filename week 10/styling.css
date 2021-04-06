@@ -1,0 +1,187 @@
+html {
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    color:lavenderblush;
+    font-weight:900;
+}
+
+h2 {
+    font-size:20px;
+}
+
+a:link {
+    color:lavenderblush;
+    font-style: normal;
+}
+
+a:visited{
+    color:rgb(255, 220, 206);
+}
+
+a:hover {
+    background:turquoise;
+    color:white;
+    font-style:italic;
+}
+
+footer {
+    color:seashell;
+    opacity: 0.60;
+    font-style: italic;
+}
+
+#hello {
+    text-align: center;
+    font-weight:900;
+}
+
+.centered {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subtext {
+    text-align: center;
+}
+
+.footer {
+    position:fixed;
+    bottom: 3px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+/* Specific for hangman game */
+* {
+    box-sizing: border-box;
+}
+
+p {
+    color:cornsilk;
+    font-size:10pt;
+}
+
+.wrapper {
+    text-align: center;
+    padding-top:50px;
+}
+
+.centerForm {
+    text-align:center;
+    padding-top:60px;
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: lavenderblush;
+    background-size:contain;
+    height:275px;
+    border-radius: 10px;
+}
+
+.letter {
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    margin: 0 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: lavenderblush;
+}
+
+.current-word {
+    list-style: none;
+    color:dodgerblue;
+}
+
+.output {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.correct {
+    background-color: rgb(163, 219, 163);
+    transition: all 1s ease;
+}
+
+.error {
+    color: rgb(216, 145, 145);
+    opacity: 1;
+}
+
+.warning {
+    color: rgb(216, 145, 145);
+    opacity: 1;
+}
+
+.win {
+    color: rgb(128, 219, 128);
+    opacity: 1;
+}
+
+#stickfigure {
+    text-align: center;
+    padding-left: 50x;
+    font-style: italic;
+    color: rgb(216, 145, 145);
+}
+
+
+/* popup text */
+.popup {
+    text-align: center;
+    padding-top:50px;
+    color:lightyellow;
+    position: relative;
+    cursor: pointer;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 560px;
+    height: 400px;
+    background-color:pink;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 40px 40px;
+    position: absolute;
+    z-index: 1;
+    bottom: 50%;
+    left: 30%;
+    align-content: center;
+}
+  
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:pink transparent transparent transparent;
+}
+ 
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+  
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
