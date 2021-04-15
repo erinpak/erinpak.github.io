@@ -1,0 +1,162 @@
+/* page setup */
+html {
+    height: 100%;
+    width: 100%;
+    margin:0;
+    background-color:#eaeaea;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color:salmon;
+}
+
+#container {
+    height: 90%;
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    margin-top:20px;
+    border: 1px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgb(156, 224, 255) 0%, #31b6ce 100%);
+}
+
+#score_help {
+    text-align: center;
+    font-size: 25px;
+    background-color: #eaeaea;
+}
+
+#branch {
+    position:absolute;
+    height:2%;
+    width:100%;
+    background-color:#292929;
+    top:23%;
+}
+
+
+/* hens */
+.hen {
+    position: absolute;
+    height:15%;
+    width:8%;
+    top:10%;
+    background:url(images/hen.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+#hen1 {
+    left:20%;
+}
+
+#hen2 {
+    left:40%;
+}
+
+#hen3 {
+    left:60%;
+}
+
+/* eggs */
+.egg {
+    position:absolute;
+    top:18%;
+    height:5%;
+    width:2%;
+    background-color:#fff;
+    border-radius:50%;
+    z-index: 99;
+}
+
+#egg1 {
+    left:23%;
+}
+
+#egg2 {
+    left:43%;
+}
+
+#egg3 {
+    left:calc(60% + 8%/2 - 2%/2);
+}
+
+
+/* egg splat */
+.bullseye {
+    display:none;
+    position:absolute;
+    bottom:0px;
+    height:7%;
+    width:7%;
+    background:url(images/bullseye.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index:11;
+}
+
+#bullseye1 {
+    left:calc(20% + 8%/2 - 7%/2);
+}
+
+#bullseye2 {
+    left:calc(40% + 8%/2 - 7%/2);
+}
+
+#bullseye3 {
+    left:calc(60% + 8%/2 - 7%/2);
+}
+
+
+/* bottom */
+#floor {
+    position: absolute;
+    height: 7%;
+    width: 100%;
+    background-color: #292929;
+    bottom: 0;
+    z-index: 10;
+}
+
+#basket {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 5px;
+    background: url('images/basket.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 11;
+}
+
+
+/* text */
+#score {
+    position: absolute;
+    color:lightpink;
+    font-size: 30px;
+    top: -5px;
+    left: 36%;
+}
+
+#restart {
+    border: 0;
+    position: absolute;
+    font-family:'Poppins', sans-serif;
+    height: 10%;
+    width: 100%;
+    background-color:salmon;
+    color: white;
+    top: 50%;
+    font-size: 35px;
+    display: none;
+    cursor: pointer;
+}

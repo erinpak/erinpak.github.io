@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>JQ Paired Programming</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="styling.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    </head>
+
+    <body>
+        <div id="container">
+
+            <!--top text-->
+            <div id="score_help">
+                score: (&nbsp &nbsp)  
+                <span id="score">0</span>
+                | lives:
+                <span id="life"></span>
+                | move mouse to control
+            </div>
+
+            <!--branch setup-->
+            <div id="branch"></div>
+            
+            <!--hens-->
+            <div id="hen1" class="hen"></div>
+            <div id="hen2" class="hen"></div>
+            <div id="hen3" class="hen"></div>
+
+            <!--eggs-->
+            <div id="egg1" class="egg" data-bullseye='1'></div>
+            <div id="egg2" class="egg" data-bullseye='2'></div>
+            <div id="egg3" class="egg" data-bullseye='3'></div>
+
+            <!--egg splat-->
+            <div id="bullseye1" class="bullseye"></div>
+            <div id="bullseye2" class="bullseye"></div>
+            <div id="bullseye3" class="bullseye"></div>
+
+            <!--bottom elements-->
+            <div id="basket">
+                <!--<span id="score"></span>-->
+            </div>
+            <div id="floor"></div>
+
+            <button id="restart">restart?</button>
+
+        </div>
+    
+    <!--js scripts-->
+    <script src="jquery.min.js"></script>
+    <script src="collision_detection.js"></script>
+    <script src="variables.js"></script>
+    <script src="functions.js"></script>
+    <script src="script.js"></script>
+
+    </body>
+
+</html>
+
+
+
+
+<!--
+    Tutorial used: https://www.youtube.com/watch?v=TdR5-_0k6pc&ab_channel=VerysimpleTUTS 
+-->
