@@ -140,7 +140,7 @@ body {
 
 /* text */
 #score {
-    position: absolute;
+    position:fixed;
     color:lightpink;
     font-size: 10px;
     top: -5px;
