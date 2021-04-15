@@ -142,9 +142,9 @@ body {
 #score {
     position:fixed;
     color:lightpink;
-    font-size: 10px;
-    top: -5px;
-    left:20px;
+    font-size: 30px;
+    top:0px;
+    left:545px;
 }
 
 #restart {
