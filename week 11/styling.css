@@ -139,13 +139,7 @@ body {
 
 
 /* text */
-#score {
-    position:fixed;
-    color:lightpink;
-    font-size: 30px;
-    top:0px;
-    left:545px;
-}
+
 
 #restart {
     border: 0;
