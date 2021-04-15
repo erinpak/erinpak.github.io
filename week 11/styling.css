@@ -142,7 +142,7 @@ body {
 #score {
     position: absolute;
     color:lightpink;
-    font-size: 30px;
+    font-size: 10px;
     top: -5px;
     left: 100px;
 }
