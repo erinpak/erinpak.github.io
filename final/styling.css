@@ -1,0 +1,23 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+#moodpage {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#moods {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}

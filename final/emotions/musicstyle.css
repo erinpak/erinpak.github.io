@@ -1,0 +1,106 @@
+body {
+    background-color: lightskyblue;
+    transition: background-color .5s;
+}
+
+.musicplayer {
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.now-playing {
+    font-size: 16px;
+}
+
+.track-name {
+    font-size: 20px;
+}
+
+.track-artist {
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.playpause-track, .prev-track, .next-track {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s; /* Opacity transition */
+}
+
+/* Changes opacity on mouse hover */
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+    opacity: 1.0;
+}
+
+/* Slider width and appearance */
+.slider_container {
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.duration_slider, .volume_slider {
+    -webkit-appearance: none; /* Removes native styling https://css-tricks.com/almanac/properties/a/appearance/ */
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.duration_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Change opacity of sliders on mouse hover */
+.duration_slider:hover, .volume_slider:hover {
+    opacity: 1.0;
+}
+
+.duration_slider {
+    opacity: 1.0;
+}
+
+.volume_slider {
+    width: 30%;
+}
+
+.current-time, .total-duration {
+    padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+    padding: 10px;
+}
+
+/* Changes mouse cursor when hovered - maybe delete this tho? */
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+    cursor: pointer;
+}
