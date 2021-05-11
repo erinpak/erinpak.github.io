@@ -92,7 +92,7 @@ a:active {
     height: 160px;
     z-index: 10;
     position: absolute;
-    transform: translate(-270px, -70px);
+    transform: translate(-270px, -68px);
     visibility: hidden;
     border-radius: 5%;
 }
@@ -102,7 +102,7 @@ a:active {
     height: 160px;
     z-index: 12;
     position: absolute;
-    transform: translate(-272px, -105px);
+    transform: translate(-272px, -100px);
     visibility: hidden;
     object-fit: cover;
     border-radius: 5%;
@@ -113,7 +113,7 @@ a:active {
     height: 160px;
     z-index: 13;
     position: absolute;
-    transform: translate(-270px, -135px);
+    transform: translate(-270px, -130px);
     visibility: hidden;
     object-fit: cover;
     border-radius: 5%;
