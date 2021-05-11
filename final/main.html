@@ -3,29 +3,70 @@
 
     <head>
         <title>music+moods</title>
+        <link rel="shortcut icon" type="image/png" href="/week 6/images/3earth.png"/> 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="emotions/gifs/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="emotions/gifs/favicon.ico" type="image/x-icon"/> 
+        
         <link rel="stylesheet" type="text/css" href="styling.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     </head>
 
     <body>
 
-        <!--
-        <div id = "popupwindow">
-            <p>instructions:</p>
-        </div>
-        -->
-
         <div id = "moodpage">
-            <h1>How are you feeling right now?</h1>
-            <div id = "moods">
-                <a href="emotions/happy.html">HAPPY</a>
-                <a href="emotions/sad.html">SAD</a>
-                <a href="emotions/dance.html">DANCE</a>
-                <a href="emotions/chill.html">CHILL</a>
+            <h1>What are you in the mood for?</h1>
+
+            <div class = "container">
+
+                <div class = "wrapper">
+                    <div id = "wrapper-header">
+                        <i class = "fas fa-circle fa-sm"></i>
+                        <i class = "far fa-circle fa-sm"></i>
+                        <i class = "far fa-circle fa-sm"></i>
+                        &nbsp
+                        Mood Preview
+                    </div>
+                    <div id = "null">
+                        <img src = "https://i.pinimg.com/originals/4b/5d/a6/4b5da63844b3760bb5dcc9ef2e6fa402.gif" id="nullPic">
+                    </div>
+                </div>
+
+
+                <div id = "moods"> <h2>
+                    
+                    <div id = "emotionOne">
+                        <a href="emotions/happy.html">> SOMETHING HAPPY</a>
+                    </div>
+                    <img src = "https://i.pinimg.com/originals/9f/af/be/9fafbea43dfd966cd66138aeded8ca7e.gif" id = "previewGifHappy">
+                    <br>                    
+
+                    <div id = "emotionTwo">
+                        <a href="emotions/sad.html">> I NEED TO CRY</a> 
+                    </div>
+                    <img src = "https://i.giphy.com/media/ptA7zZbt0KHxC/giphy.webp" id = "previewGifCry">
+                    <br>
+
+                    <div id = "emotionThree">
+                        <a href="emotions/dance.html">> LET'S DANCE</a> 
+                    </div>
+                    <img src = "https://media1.tenor.com/images/9a4d60fc3b438877a2dc36da0d066780/tenor.gif?itemid=9152583" id = "previewGifDance">
+                    <br>
+
+                    <div id = "emotionFour">
+                        <a href="emotions/chill.html">> GET WORK DONE</a>
+                    </div>
+                    <img src = "https://media1.tenor.com/images/c1a3f334619e34cba6a628201b5e5c5b/tenor.gif" id = "previewGifChill">
+                    </h2>
+
+                </div>
+
             </div>
         </div>
 
     </body>
+    <script src="main.js"></script> 
 
 </html>

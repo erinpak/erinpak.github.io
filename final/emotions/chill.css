@@ -1,0 +1,290 @@
+@import url('http://fonts.cdnfonts.com/css/press-start'); /* Big font */
+@import url('http://fonts.cdnfonts.com/css/blokus');  /* Small font */
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Blokus', sans-serif;
+    font-size: 12pt;
+    /* Change bg image!!! */
+    background-image: linear-gradient(0deg, rgb(247, 247, 247) 23.8%, rgb(241, 255, 193) 92%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: crosshair;
+    color:rgba(99, 121, 96, 0.6);
+}
+
+main {
+    transform: translateY(-30px);
+    position: fixed;
+}
+
+h1 {
+    font-family: 'Blokus', sans-serif;
+    color:rgba(120, 150, 100, 0.6);
+}
+
+h2 {
+    margin: 0;
+    font-size: 12pt;
+    color:rgba(99, 121, 96, 0.6);
+}
+
+p {
+    font-style: italic;
+}
+
+.overlay {
+    position: fixed;
+    width: 130vw;
+    height: 120vh;
+    object-fit: cover;
+    transform: translate(-50%, -32%);
+    top: 0;
+    left: 0;
+    opacity: .2;
+    background: url('https://i.pinimg.com/originals/4a/65/ab/4a65abeead3a8d113bccfee5d5d239f4.gif');
+}
+
+#gif {
+    width: 28px;
+    height: 20px;
+    object-fit:scale-down;
+    transform: translate(10px, 5px);
+}
+
+#playlistTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+.music-container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(194, 207, 164, 0.6);
+    display: flex;
+    flex-direction: column;
+    padding: 125px 50px;
+    position: relative;
+    margin: 10px 0;
+    z-index: 9; /* used to be 10 */
+}
+
+#music-container-header {
+    z-index: 10;
+    padding: 0px;
+    transform: translate(-20%, -115px);
+    color:rgba(99, 121, 96, 0.6);
+    font-size: 10pt;
+}
+
+.fas fa-circle {
+    height: 100pt;
+}
+
+/* Cover art container */
+.img-container {
+    position: relative;
+    width: 110px;
+}
+
+.img-container::after { /* Little circle in middle to look like a record */
+    content: '';
+    background-color: #fff;
+    height: 25px;
+    width: 25px;
+    position:absolute;
+    left: 80%;
+    bottom: 50%;
+    transform: translate(-50%, -110%);
+    border-radius: 50%;
+}
+
+.img-container::before { /* CD border */
+    content: '';
+    background: linear-gradient(150deg, rgba(230, 252, 228, 0.6), rgba(99, 121, 96, 0.6));
+    height: 115px;
+    width: 115px;
+    position: absolute;
+    left: 14%;
+    bottom: 10px;
+    transform: translate(13%, 22%);
+    border-radius: 50%;
+}
+
+.img-container img {
+    width: inherit;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: -10pt;
+    left: 30%;
+    /* Looping record animation */
+    animation: rotate 15s linear infinite; 
+    animation-play-state: paused; /* Only rotate when press play with play class in music container below */
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+} /* so when play class is selected within music container, img in img-container will play rotate animation */
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Navigation buttons */
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transform: translateY(90px);
+}
+
+.action-btn {
+    background-color: #fff;
+    border-color: rgba(175, 196, 173, 0.6);
+    border-width: 1.5pt;
+    border-radius: 9px;
+    color:rgba(154, 170, 152, 0.6);
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    cursor: cell;
+    padding: 10px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn:active {
+    background-color: rgba(186, 202, 185, 0.6);
+}
+
+.action-btn-big { /* Bigger play button */
+    color:rgba(99, 121, 96, 0.6);
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn:focus { /* No blue outline on buttons after pressing */
+    outline: 0;
+    /* How to: https://stackoverflow.com/questions/20593224/how-do-i-remove-blue-selected-outline-on-buttons/20593333#:~:text=You%20can%20remove%20the%20blue%20outline%20by%20using%20outline%3A%20none%20 */
+}
+
+/* Music info bar */
+.music-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 53%;
+    left: 36.5%;
+    text-align: center;
+    opacity: 1;
+}
+
+/* Progress bar */
+.progress-container {
+    background: rgb(230, 230, 230);
+    border-radius: 5px;
+    cursor: cell;
+    margin: 10px 0;
+    height: 4px;
+    width: 250%;
+}
+
+.progress {
+    background-color: rgba(146, 199, 141, 0.6);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%; /* This will change depending on what part of song you're on */
+    transition: width  0.1s linear;
+}
+
+
+
+/* SIDEBAR NAVI */
+
+.sidenav {
+    height: 110vh;
+    width: 300px;
+    position: fixed;
+    z-index: 15;
+    background-color: rgb(26, 26, 26);
+    top:-10px;
+    left:-20px;
+    overflow-x: hidden;
+    transition: 0.5s;
+    transform: translate(-570px, -130px);
+    padding-top: 50px;
+}
+
+#homeText {
+    font-family: 'Press Start K';
+    font-size: 20px;
+}
+
+.sidenav p {
+    transform:translate(43px, 220px);
+    width: 200px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.sidenav a {
+    padding: 4px 7px 44px 40px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #e2b7ff;
+    cursor: cell;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 28px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: cell;
+}
+  
+#naviButton {
+    transition: margin-left .5s;
+    left:0;
+    cursor: cell;
+    transform: translate(-550px, -550px);
+}

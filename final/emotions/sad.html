@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>🌧 sad playlist 🌧</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="gifs/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="gifs/favicon.ico" type="image/x-icon"/>
+
+        <!--Using Fontawesome from cdnjs.com for the music player buttons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" type="text/css" href="sad.css">
+    </head>
+
+    <body onload="setup()";> <!-- What this function does: https://www.bitdegree.org/learn/javascript-onload -->
+    <main> 
+
+        <div id = "playlistTitle">
+            <p>in &nbsp</p> <h1>my bag</h1>
+        </div>
+
+        <div class="music-container"> <!-- To look like a browser hehe -->
+            <div id="music-container-header">
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                &nbsp
+                Audio Player
+                <img src="https://i.pinimg.com/originals/ae/27/f1/ae27f1825fe9d7035d18a9095c565c36.gif" id="gif"> <!-- EQ gif -->
+            </div>
+
+            <!-- Holds song title + progress bar when play is clicked -->
+            <div class="music-info">
+                <h2 id="title">Song name</h4>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            
+            <!-- Audio -->
+            <audio src="music/Deep Space.mp3" id="audio"></audio>
+
+            <!-- Cover art -->
+            <div class="img-container">
+                <img src="images/Deep Space.jpg" alt="music-cover" id="cover">
+            </div>
+
+            <!-- Navigation & FA buttons -->
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big"> <!--slightly larger play btn-->
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Rain sound button -->
+        <div class="ambient-noise">
+            <p>Accompany music with rain:</p>
+            <audio controls loop id="miniplayer"> <!-- Shows miniplayer navi, loops audio -->
+                <source src = "gifs/Ambient Rain.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    
+        <!-- SIDE NAVI -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- Close button -->
+            <a href="../main.html" id="homeText">HOME</a>
+            <a href="happy.html">Feel-good</a>
+            <a href="#">Feeling down</a>
+            <a href="dance.html">EDM</a>
+            <a href="chill.html">Study</a>
+            <p>
+                Created by Erin Pak as the <br>Final project for Spring <br>2021 Web Development
+            </p>
+        </div>
+        
+        <div id="naviButton">
+            <span onclick="openNav()">
+                <i class="fas fa-bars fa-lg"></i>
+            </span>
+        </div>
+
+    </main>
+
+    <canvas id = "canvas" width = "1920" height = "1080"></canvas>
+    <script src="sad.js"></script>    
+    
+    </body>
+
+</html>

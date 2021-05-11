@@ -2,53 +2,91 @@
 <html>
 
     <head>
-        <title>😭💔☔</title>
+        <title>📓 study music 📓</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="musicstyle.css">
-        <!-- I'm using FontAwesome icons I found on W3 Schools which uses the <i> in my html -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+        <link rel="icon" href="gifs/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="gifs/favicon.ico" type="image/x-icon"/>
+
+        <!--Using Fontawesome from cdnjs.com for the music player buttons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" type="text/css" href="chill.css">
     </head>
 
     <body>
+    <main>
 
-        <div class="musicplayer">
-
-            <!-- Details display -->
-            <div class="details">
-                <div class="track-name">Title track</div>
-                <div class="track-artist">Track artist</div>
-            </div>
-            
-            <!-- Buttons display -->
-            <div class="buttons">
-                <div class="prev-track" onclick="prevTrack()">
-                    <i class="fa fa-step-backward fa-2x"></i>
-                </div>
-                <div class="playpause-track" onclick="playpauseTrack()">
-                    <i class="fa fa-play-circle fa-5x"></i>
-                </div>
-                <div class="next-track" onclick="nextTrack()">
-                    <i class="fa fa-step-forward fa-2x"></i>
-                </div>
-            </div>
-
-            <!-- Music duration slider -->
-            <div class="slider_container">
-                <div class="current-time>">00:00</div>
-                <input type="range" min="1" max="100" value="0" class="duration_slider" onchange="durationTo()">
-                <div class="total-duration">00:00</div>
-            </div>
-
-            <!-- Volume slider -->
-            <div class="slider_container">
-                <i class="fa fa-volume-down"></i>
-                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-                <i class="fa fa-volume-up"></i>
-            </div>
+        <div id = "playlistTitle">
+            <p>the &nbsp</p> <h1>study playlist</h1>
         </div>
 
-        <script src="chill.js"></script>
+        <div class="music-container"> <!-- To look like a browser hehe -->
+            <div id="music-container-header">
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                &nbsp
+                Audio Player
+                <img src="https://cutewallpaper.org/21/music-equalizer-gif/C-Rod-Music-About.gif" id="gif"> <!-- EQ gif -->
+            </div>
+
+            <!-- Holds song title + progress bar when play is clicked -->
+            <div class="music-info">
+                <h2 id="title">Song name</h4>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            
+            <!-- Audio -->
+            <audio src="Deep Space.mp3" id="audio"></audio>
+
+            <!-- Cover art -->
+            <div class="img-container">
+                <img src="Deep Space.jpg" alt="music-cover" id="cover">
+            </div>
+
+            <!-- Navigation & FA buttons -->
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big"> <!--slightly larger play btn-->
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+    
+    <div class = "overlay"></div>
+
+        
+        <!-- SIDE NAVI -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- Close button -->
+            <a href="../main.html" id="homeText">HOME</a>
+            <a href="happy.html">Feel-good</a>
+            <a href="sad.html">Feeling down</a>
+            <a href="dance.html">EDM</a>
+            <a href="#">Study</a>
+            <p>
+                Created by Erin Pak as the <br>Final project for Spring <br>2021 Web Development
+            </p>
+        </div>
+        
+        <div id="naviButton">
+            <span onclick="openNav()">
+                <i class="fas fa-bars fa-lg"></i>
+            </span>
+        </div>
+
+
+    <script src="chill.js"></script>    
+    
+    </main>
     </body>
 
 </html>

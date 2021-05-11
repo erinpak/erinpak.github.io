@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>👟 hype mix 👟</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="gifs/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="gifs/favicon.ico" type="image/x-icon"/>
+
+        <!--Using Fontawesome from cdnjs.com for the music player buttons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" type="text/css" href="dance.css">
+    </head>
+
+    <body>
+    <main>
+
+        <div id = "playlistTitle">
+            <p>the &nbsp</p> <h1>hype playlist</h1>
+        </div>
+
+        <div class="music-container"> <!-- To look like a browser hehe -->
+            <div id="music-container-header">
+                <i class="fas fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                <i class="far fa-circle fa-sm"></i>
+                &nbsp
+                Audio Player
+                <img src="https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif" id="gif"> <!-- EQ gif -->
+            </div>
+
+            <!-- Holds song title + progress bar when play is clicked -->
+            <div class="music-info">
+                <h2 id="title">Song name</h4>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            
+            <!-- Audio -->
+            <audio src="music/Deep Space.mp3" id="audio"></audio>
+
+            <!-- Cover art -->
+            <div class="img-container">
+                <img src="images/Deep Space.jpg" alt="music-cover" id="cover">
+            </div>
+
+            <!-- Navigation & FA buttons -->
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big"> <!--slightly larger play btn-->
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+    
+        
+        <!-- SIDE NAVI -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- Close button -->
+            <a href="../main.html" id="homeText">HOME</a>
+            <a href="happy.html">Feel-good</a>
+            <a href="sad.html">Feeling down</a>
+            <a href="#">EDM</a>
+            <a href="chill.html">Study</a>
+            <p>
+                Created by Erin Pak as the Final <br> project for Spring 2021 Web Dev
+            </p>
+        </div>
+        
+        <div id="naviButton">
+            <span onclick="openNav()">
+                <i class="fas fa-bars fa-lg"></i>
+            </span>
+        </div>
+
+
+    </main>
+
+    <script src="dance.js"></script>    
+    
+    </body>
+
+</html>
